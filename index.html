@@ -1,80 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gorav Dhadhich</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="icon.png" type="image/png">
-  <meta name="theme-color" content="#1e293b"/>
-</head>
-<body>
-  <div class="container">
-    <img src="avatar.png" alt="Gorav's Avatar" class="avatar" />
+  <meta name="description" content="Gorav Dhadhich - Web Developer Portfolio" />
+  <title>Gorav Dhadhich | Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }body {
+  background: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background: #1f2937;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4ade80;
+}
+
+.section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.about, .projects, .contact {
+  margin-bottom: 2rem;
+}
+
+.project-box {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #1f2937;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+  </style>
+</head><body>
+  <header>
+    <img src="avatar.png" alt="Gorav Dhadhich">
     <h1>Gorav Dhadhich</h1>
-    <p class="about">
-      I’m a passionate student and aspiring engineer. I scored 92% in Class 12 and I’m preparing for the JEE through self-study. I love creating websites, mobile apps, and fun games like Flappy Mini and Culture Quest.
-    </p>
-
-    <section>
-      <h2>📚 Education</h2>
-      <ul>
-        <li>Class 12: 92%</li>
-        <li>JEE 2025 Aspirant</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🛠️ Skills</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>Game Development</li>
-        <li>PWA & UI/UX Design</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🎯 Goals</h2>
-      <ul>
-        <li>Crack JEE</li>
-        <li>Build useful and fun apps</li>
-        <li>Become a great developer</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📱 Projects</h2>
-      <ul>
-        <li>Flappy Mini</li>
-        <li>Culture Quest</li>
-        <li>Personal Notes Web App</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>📞 Contact</h2>
-      <p>Coming soon!</p>
-    </section>
-  </div>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js');
-    }
-  </script>
-</body>
-</html>
-<head>
-  <meta charset="UTF-8">
-  <title>My Website</title>
-
-  <!-- ✅ Google site verification -->
-  <meta name="google-site-verification" content="40FVW8bobmy6ajVecdmubkSsL_FhR3YNlE7ko9KlIYY" />
-  
-  <!-- your other head tags like stylesheets or icons -->
-</head>
-<title>Gorav Dhadhich - Developer Portfolio</title>
-<meta name="description" content="Gorav's personal website and portfolio showcasing projects, coding work, and more.">
-<meta name="keywords" content="Gorav, Gorav Dhadhich, gorav43, web developer, JEE student, projects">
-<meta name="robots" content="index, follow">
+    <h2>Beginner Web Developer</h2>
+  </header>  <section class="section about">
+    <h2>About Me</h2>
+    <p>I'm Gorav Dhadhich, a self-taught web developer exploring the digital world. I'm passionate about learning and building creative, useful projects that reflect my curiosity and growth in programming.</p>
+  </section>  <section class="section projects">
+    <h2>My Projects</h2>
+    <div class="project-box">
+      <h3>Simple Calculator</h3>
+      <p>A basic calculator app built using HTML, CSS, and JavaScript. It performs simple arithmetic operations and has a clean UI for easy use.</p>
+    </div>
+  </section>  <section class="section contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:goravdhadhich@gmail.com">goravdhadhich@gmail.com</a></p>
+  </section>  <footer>
+    <p>&copy; 2025 Gorav Dhadhich</p>
+  </footer>
+</body></html>
