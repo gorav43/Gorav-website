@@ -1,27 +1,52 @@
-body {
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Poppins', sans-serif;
   background-color: #0f172a;
   color: #f1f5f9;
+  line-height: 1.6;
+  padding: 1rem;
 }
 
+/* Container with Glass Effect */
 .container {
   max-width: 700px;
-  margin: auto;
+  margin: 2rem auto;
   padding: 2rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 
+/* Avatar Image */
 .avatar {
   width: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
   border: 3px solid #3b82f6;
+  transition: transform 0.3s ease;
 }
 
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Headings */
 h1 {
-  font-size: 2rem;
+  font-size: 2.4rem;
   margin: 0.5rem 0;
+  color: #ffffff;
 }
 
 .about {
@@ -30,21 +55,65 @@ h1 {
   color: #94a3b8;
 }
 
-section {
-  margin: 1.5rem 0;
-  text-align: left;
-}
-
 h2 {
   color: #3b82f6;
   border-bottom: 1px solid #334155;
   padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  text-align: left;
 }
 
+/* Section */
+section {
+  margin: 2rem 0;
+  text-align: left;
+}
+
+/* Lists */
 ul {
   padding-left: 1rem;
 }
 
 li {
   margin: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+li:hover {
+  color: #60a5fa;
+}
+
+/* Button Style */
+button, .btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
+}
+
+button:hover, .btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  button, .btn {
+    width: 100%;
+  }
 }
