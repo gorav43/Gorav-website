@@ -1,136 +1,193 @@
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0f172a;
-  color: white;
-  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
-nav {
-  background: #1e293b;
-  padding: 1rem;
-  text-align: center;
+.dark {
+  background: #111;
+  color: #eee;
+}
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 10px 40px;
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+.dark header {
+  background: #1e1e1e;
+}
+
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
+.logo {
+  font-size: 1.8em;
   font-weight: bold;
+  color: #6c5ce7;
 }
 
-#modeToggle {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-}
-
-.section {
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 1px solid #334155;
-}
-
-.avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-
-h1, h2 {
-  color: #38bdf8;
-}
-
-ul {
+.nav-links {
   list-style: none;
-  padding: 0;
+  display: flex;
+  gap: 20px;
 }
 
-.project {
-  margin: 20px auto;
-  max-width: 400px;
-  padding: 15px;
-  background: #1e293b;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.project a {
-  color: #38bdf8;
+.nav-links li a {
   text-decoration: none;
+  color: inherit;
+  font-weight: 500;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-form {
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-button {
+.btn {
   padding: 10px 20px;
-  background: #38bdf8;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.talk-btn {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  background: #fff;
+}
+
+.dark .hero {
+  background: #1e1e1e;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+}
+
+.purple {
+  color: #6c5ce7;
+}
+
+.hero-text h2 {
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.hero-text p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.buttons .btn {
+  margin-right: 15px;
+}
+
+.hire-btn {
+  background-color: #6c5ce7;
+  color: white;
+}
+
+.project-btn {
+  border: 2px solid #6c5ce7;
+  color: #6c5ce7;
+  background: none;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 1.2em;
+  color: #6c5ce7;
+}
+
+.hero-image img {
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+/* Upload Section */
+.upload-section {
+  background: #fff;
+  padding: 40px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.dark .upload-section {
+  background: #222;
+}
+
+.upload-section input[type="file"] {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.label-text {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #6c5ce7;
+}
+
+/* Toggle Theme Button */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.theme-toggle button {
+  padding: 10px;
+  background: #6c5ce7;
   color: white;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 50%;
+  font-size: 16px;
 }
 
-button:hover {
-  background: #0ea5e9;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-/* Light Mode */
-.light-mode {
-  background: #f9f9f9;
-  color: #0f172a;
-}
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
 
-.light-mode nav {
-  background: #e2e8f0;
-}
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
 
-.light-mode .project {
-  background: #ffffff;
-  color: #0f172a;
-}
-
-.light-mode h1, 
-.light-mode h2 {
-  color: #0ea5e9;
-}
-
-.light-mode a {
-  color: #0ea5e9;
+  .hero-image img {
+    width: 80%;
+    margin-top: 20px;
+  }
 }
