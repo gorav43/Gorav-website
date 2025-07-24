@@ -1,193 +1,172 @@
+style.css */
+
+:root {
+  --primary-color: #0a66c2;
+  --bg-light: #ffffff;
+  --bg-dark: #121212;
+  --text-light: #000000;
+  --text-dark: #ffffff;
+  --card-bg-light: #f9f9f9;
+  --card-bg-dark: #1e1e1e;
+}
+
 body {
-  margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #f4f4f4;
-  color: #333;
+  margin: 0;
+  padding: 0;
   transition: background 0.3s, color 0.3s;
+  background: var(--bg-light);
+  color: var(--text-light);
 }
 
-.dark {
-  background: #111;
-  color: #eee;
-}
-
-header {
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  padding: 10px 40px;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.dark header {
-  background: #1e1e1e;
+body.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--card-bg-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: #6c5ce7;
+body.dark nav {
+  background-color: var(--card-bg-dark);
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+nav h1 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: 500;
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
+#toggle-theme {
+  font-size: 1.2rem;
+  background: none;
   border: none;
+  cursor: pointer;
+  color: inherit;
 }
 
-.talk-btn {
-  background-color: #6c5ce7;
-  color: white;
+section {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 60px 40px;
-  background: #fff;
-}
-
-.dark .hero {
-  background: #1e1e1e;
-}
-
-.hero-text {
-  max-width: 600px;
-}
-
-.hero-text h1 {
-  font-size: 2.5em;
-}
-
-.purple {
-  color: #6c5ce7;
-}
-
-.hero-text h2 {
-  font-weight: 400;
-  margin: 10px 0;
-}
-
-.hero-text p {
-  margin: 20px 0;
-  line-height: 1.6;
-}
-
-.buttons .btn {
-  margin-right: 15px;
-}
-
-.hire-btn {
-  background-color: #6c5ce7;
-  color: white;
-}
-
-.project-btn {
-  border: 2px solid #6c5ce7;
-  color: #6c5ce7;
-  background: none;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  margin-right: 15px;
-  font-size: 1.2em;
-  color: #6c5ce7;
-}
-
-.hero-image img {
-  max-width: 350px;
-  border-radius: 10px;
-}
-
-/* Upload Section */
-.upload-section {
-  background: #fff;
-  padding: 40px;
   text-align: center;
-  margin: 0 auto;
-  max-width: 600px;
+  padding-top: 2rem;
 }
 
-.dark .upload-section {
-  background: #222;
-}
-
-.upload-section input[type="file"] {
-  padding: 10px;
-  margin-top: 10px;
-}
-
-.label-text {
-  margin-top: 10px;
-  font-weight: 600;
-  color: #6c5ce7;
-}
-
-/* Toggle Theme Button */
-.theme-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 999;
-}
-
-.theme-toggle button {
-  padding: 10px;
-  background: #6c5ce7;
-  color: white;
-  border: none;
+.profile-pic {
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  font-size: 16px;
+  border: 3px solid var(--primary-color);
+  margin-bottom: 1rem;
 }
 
-/* Responsive */
+h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.project {
+  background-color: var(--card-bg-light);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .project {
+  background-color: var(--card-bg-dark);
+}
+
+.project h3 {
+  margin: 0.5rem 0;
+}
+
+.project a {
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
+  nav h1 {
+    font-size: 1.2rem;
   }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero-image img {
-    width: 80%;
-    margin-top: 20px;
+  h2 {
+    font-size: 1.5rem;
   }
 }
+
+/* Scroll animation trigger */
+const sections = document.querySelectorAll("section");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
