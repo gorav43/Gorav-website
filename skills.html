@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Gorav Dhadhich</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .skills-section {
+      padding: 4rem 2rem;
+    }
+
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress {
+      background-color: #eee;
+      height: 10px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 10px;
+      background-color: #ff4c60;
+      width: 0%;
+      animation: fillBar 2s ease forwards;
+    }
+
+    @keyframes fillBar {
+      to {
+        width: 100%;
+      }
+    }
+
+    .html .progress-bar { width: 90%; }
+    .css .progress-bar { width: 85%; }
+    .js .progress-bar { width: 75%; }
+    .pwa .progress-bar { width: 60%; }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Gorav</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html" class="active">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="downloads.html">Downloads</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="toggle-btn" onclick="toggleMode()">🌙</div>
+    </nav>
+  </header>
+
+  <section class="skills-section">
+    <h1>My Skills</h1>
+
+    <div class="skill html">
+      <div class="skill-name">HTML</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+    </div>
+
+    <div class="skill css">
+      <div class="skill-name">CSS</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+    </div>
+
+    <div class="skill js">
+      <div class="skill-name">JavaScript</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+    </div>
+
+    <div class="skill pwa">
+      <div class="skill-name">PWA & Web App Hosting</div>
+      <div class="progress"><div class="progress-bar"></div></div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
