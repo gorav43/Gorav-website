@@ -1,38 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gorav Dhadhich | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">Gorav</div>
-    <nav>
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="downloads.html">Downloads</a></li>
-        <li><a href="contact.html">Contact</a></li>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Portfolio</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="toggle-btn" onclick="toggleMode()">🌙</div>
+      <a href="cv.pdf" class="btn-download" download>Download CV</a>
     </nav>
-  </header>
-
-  <section class="hero">
+  </header>  <section id="home" class="hero">
     <div class="hero-content">
-      <h1>Hi, I'm <span>Gorav Dhadhich</span></h1>
-      <p class="tagline">Available for Work</p>
-      <a href="contact.html" class="cta">Get in Touch</a>
+      <img src="avatar.jpg" alt="Gorav Dhadhich" class="hero-img" />
+      <div>
+        <h1>Hello, I'm <span class="highlight">Gorav Dhadhich</span></h1>
+        <h2>And I'm a Frontend Developer</h2>
+        <p>Creating beautiful, glowing, and responsive websites.</p>
+        <div class="btns">
+          <a href="#contact" class="btn">Hire Me</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
     </div>
-    <div class="hero-img">
-      <img src="images/profile.jpg" alt="Gorav Dhadhich" />
+  </section>  <section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p class="section-text">I'm Gorav, a passionate frontend developer who loves building glowing, modern, and responsive web interfaces with HTML, CSS, and JavaScript.</p>
+  </section>  <section id="skills" class="section">
+    <h2 class="section-title">Skills</h2>
+    <ul class="skills-list">
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Responsive Design</li>
+      <li>Web Animations</li>
+    </ul>
+  </section>  <section id="services" class="section">
+    <h2 class="section-title">Services</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Website Design</h3>
+        <p>Creative UI/UX designs with glowing effects and smooth transitions.</p>
+      </div>
+      <div class="service-box">
+        <h3>Frontend Development</h3>
+        <p>Fully functional, fast, and responsive websites built from scratch.</p>
+      </div>
+      <div class="service-box">
+        <h3>Website Optimization</h3>
+        <p>Speed and SEO optimized websites for better performance and visibility.</p>
+      </div>
     </div>
-  </section>
-
-  <script src="js/script.js"></script>
+  </section>  <section id="portfolio" class="section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="portfolio-items">
+      <div class="portfolio-item">Flappy Mini Game</div>
+      <div class="portfolio-item">Private Notes App</div>
+      <div class="portfolio-item">Culture Quest Game</div>
+    </div>
+  </section>  <section id="contact" class="section">
+    <h2 class="section-title">Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>  <footer>
+    <p>&copy; 2025 Gorav Dhadhich. All rights reserved.</p>
+  </footer>
 </body>
 </html>
