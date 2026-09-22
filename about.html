@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Gorav Dhadhich | Web Developer</title>
+
+    <meta name="description"
+        content="Learn more about Gorav Dhadhich, a Computer Science student and aspiring software developer.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =========================
+           ABOUT PAGE
+           ========================= */
+
+        .about-page {
+            min-height: 100vh;
+            padding: 130px 7% 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-page::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle,
+                    rgba(124, 92, 255, 0.16),
+                    transparent 70%);
+            top: 100px;
+            left: -180px;
+            pointer-events: none;
+        }
+
+        .about-page::after {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle,
+                    rgba(0, 170, 255, 0.10),
+                    transparent 70%);
+            right: -150px;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+
+        .about-heading {
+            margin-bottom: 60px;
+        }
+
+        .about-heading span {
+            display: block;
+            font-size: 12px;
+            letter-spacing: 4px;
+            color: #8d6cff;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .about-heading h1 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1;
+            margin: 0;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #9b6cff, #4fa8ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Main Grid */
+
+        .about-main {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        /* Photo */
+
+        .about-photo-wrapper {
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .about-photo-card {
+            width: 340px;
+            height: 430px;
+            padding: 10px;
+            border-radius: 28px;
+            background:
+                linear-gradient(#08080d, #08080d) padding-box,
+                linear-gradient(135deg, #8b5cf6, #2563eb, #06b6d4) border-box;
+            border: 1px solid transparent;
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.45),
+                0 0 60px rgba(124, 92, 255, 0.12);
+            position: relative;
+        }
+
+        .about-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+        }
+
+        .photo-glow {
+            position: absolute;
+            inset: -30px;
+            border-radius: 40px;
+            background: radial-gradient(circle,
+                    rgba(124, 92, 255, 0.20),
+                    transparent 65%);
+            z-index: -1;
+        }
+
+        /* Content */
+
+        .about-content .label {
+            font-size: 12px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            color: #8d6cff;
+            margin-bottom: 18px;
+        }
+
+        .about-content h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(30px, 4vw, 48px);
+            line-height: 1.15;
+            margin: 0 0 24px;
+        }
+
+        .about-content p {
+            color: #a9a9b5;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        /* Info Cards */
+
+        .about-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+        .info-card {
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.025);
+            border-radius: 16px;
+            transition: 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(124, 92, 255, 0.45);
+            box-shadow: 0 12px 35px rgba(124, 92, 255, 0.10);
+        }
+
+        .info-card small {
+            display: block;
+            color: #777784;
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        .info-card strong {
+            color: #f4f4f7;
+            font-size: 15px;
+        }
+
+        /* Journey */
+
+        .journey {
+            margin-top: 110px;
+        }
+
+        .journey-heading {
+            margin-bottom: 35px;
+        }
+
+        .journey-heading span {
+            font-size: 12px;
+            color: #8d6cff;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        .journey-heading h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 38px;
+            margin: 10px 0 0;
+        }
+
+        .journey-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .journey-card {
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.025);
+            transition: 0.3s ease;
+        }
+
+        .journey-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(124, 92, 255, 0.4);
+        }
+
+        .journey-number {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 14px;
+            color: #8d6cff;
+            margin-bottom: 22px;
+        }
+
+        .journey-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .journey-card p {
+            color: #92929d;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        /* Buttons */
+
+        .about-buttons {
+            display: flex;
+            gap: 14px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .about-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 13px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.3s ease;
+        }
+
+        .primary-btn {
+            color: white;
+            background: linear-gradient(135deg, #7c5cff, #4f8cff);
+            box-shadow: 0 10px 30px rgba(124, 92, 255, 0.2);
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(124, 92, 255, 0.35);
+        }
+
+        .secondary-btn {
+            color: #ddd;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .secondary-btn:hover {
+            border-color: #7c5cff;
+            transform: translateY(-3px);
+        }
+
+        /* Back Button */
+
+        .back-home {
+            position: fixed;
+            top: 24px;
+            left: 7%;
+            z-index: 100;
+            text-decoration: none;
+            color: #aaa;
+            font-size: 13px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            color: white;
+        }
+
+        /* Light Theme */
+
+        body.light-theme .about-content p,
+        body.light-theme .journey-card p {
+            color: #5e5e68;
+        }
+
+        body.light-theme .info-card,
+        body.light-theme .journey-card {
+            background: rgba(0, 0, 0, 0.025);
+            border-color: rgba(0, 0, 0, 0.08);
+        }
+
+        body.light-theme .info-card strong {
+            color: #222;
+        }
+
+        body.light-theme .secondary-btn {
+            color: #222;
+            border-color: rgba(0, 0, 0, 0.12);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 900px) {
+            .about-main {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .about-photo-wrapper {
+                order: -1;
+            }
+
+            .journey-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .about-page {
+                padding: 110px 6% 60px;
+            }
+
+            .about-heading {
+                margin-bottom: 40px;
+            }
+
+            .about-photo-card {
+                width: 270px;
+                height: 340px;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .journey {
+                margin-top: 75px;
+            }
+
+            .back-home {
+                left: 6%;
+            }
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 11px 20px;
+
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 12px;
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        /* Arrow */
+        .back-home::first-letter {
+            color: #a78bfa;
+        }
+
+        /* Hover */
+        .back-home:hover {
+            transform: translateY(-3px);
+            background: rgba(124, 92, 255, 0.12);
+            border-color: rgba(124, 92, 255, 0.5);
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.3),
+                0 0 25px rgba(124, 92, 255, 0.15);
+        }
+
+        /* Click */
+        .back-home:active {
+            transform: translateY(-1px);
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .back-home {
+                padding: 10px 16px;
+                font-size: 13px;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- BACK TO HOME -->
+
+    <a href="index.html" class="back-home">
+        ← Back to Home
+    </a>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <main class="about-page">
+
+        <div class="about-container">
+
+
+            <!-- PAGE HEADING -->
+
+            <header class="about-heading">
+
+                <span>01 — ABOUT</span>
+
+                <h1>
+                    More than just
+                    <span class="gradient-text">
+                        code.
+                    </span>
+                </h1>
+
+            </header>
+
+
+            <!-- MAIN ABOUT -->
+
+            <section class="about-main">
+
+
+                <!-- PHOTO -->
+
+                <div class="about-photo-wrapper">
+
+                    <div class="photo-glow"></div>
+
+                    <div class="about-photo-card">
+
+                        <img src="assets/images/gorv.jpg" alt="Gorav Dhadhich" class="about-photo">
+
+                    </div>
+
+                </div>
+
+
+                <!-- CONTENT -->
+
+                <div class="about-content">
+
+                    <div class="label">
+                        GET TO KNOW ME
+                    </div>
+
+                    <h2>
+                        Hi, I'm
+                        <span class="gradient-text">
+                            Gorav Dhadhich.
+                        </span>
+                    </h2>
+
+                    <p>
+                        I'm a Computer Science student and aspiring
+                        software developer who enjoys turning ideas
+                        into interactive digital experiences.
+                    </p>
+
+                    <p>
+                        I like building websites, experimenting with
+                        JavaScript and creating useful web-based tools.
+                        Every project gives me an opportunity to learn
+                        something new and improve my skills.
+                    </p>
+
+                    <p>
+                        My current focus is strengthening my programming
+                        fundamentals, exploring modern web development
+                        and building real-world projects alongside my
+                        B.Tech journey.
+                    </p>
+
+
+                    <!-- INFO -->
+
+                    <div class="about-info">
+
+                        <div class="info-card">
+                            <small>Education</small>
+                            <strong>B.Tech Computer Science</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Focus</small>
+                            <strong>Web Development</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Languages</small>
+                            <strong>C · HTML · CSS · JavaScript</strong>
+                        </div>
+
+                        <div class="info-card">
+                            <small>Currently Learning</small>
+                            <strong>Python & Data Structures</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="about-buttons">
+
+                        <a href="index.html#projects" class="about-btn primary-btn">
+                            View My Projects →
+                        </a>
+
+                        <a href="contact.html" class="about-btn secondary-btn">
+                            Let's Connect
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= JOURNEY ================= -->
+
+            <section class="journey">
+
+                <div class="journey-heading">
+
+                    <span>MY JOURNEY</span>
+
+                    <h2>
+                        Learning. Building. Improving.
+                    </h2>
+
+                </div>
+
+
+                <div class="journey-grid">
+
+
+                    <article class="journey-card">
+
+                        <div class="journey-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Computer Science
+                        </h3>
+
+                        <p>
+                            Currently pursuing B.Tech in Computer
+                            Science and developing a strong foundation
+                            in programming and computer fundamentals.
+                        </p>
+
+                    </article>
+
+
+                    <article class="journey-card">
+
+                        <div class="journey-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Building Projects
+                        </h3>
+
+                        <p>
+                            Creating websites and browser-based tools
+                            to turn ideas into practical and interactive
+                            projects.
+                        </p>
+
+                    </article>
+
+
+                    <article class="journey-card">
+
+                        <div class="journey-number">
+                            03
+                        </div>
+
+                        <h3>
+                            What's Next
+                        </h3>
+
+                        <p>
+                            Continuing to learn JavaScript, Python,
+                            data structures and modern development
+                            while building more advanced projects.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= SCRIPT ================= -->
+
+    <script>
+
+        // Preserve the existing theme preference
+
+        const savedTheme =
+            localStorage.getItem("gorav-theme");
+
+        if (savedTheme === "light") {
+
+            document.body.classList.add("light-theme");
+
+        }
+
+    </script>
+
+</body>
+
+</html>
